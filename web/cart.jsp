@@ -88,11 +88,11 @@
 	<hr>
 	<div class="row">
 		<div class="pull-right" style="margin-right: 40px;">
-			
+
 	            <div>
 	            	<a id="removeAllProduct" onclick="clearCart(${loginUser.uid})" class="btn btn-default btn-lg">清空购物车</a>
 	            	&nbsp;&nbsp;
-	            	<a href="${pageContext.request.contextPath}/getOrderView" class="btn  btn-danger btn-lg">添加收货地址</a>
+	            	<a href="${pageContext.request.contextPath}/order?method=preView&uid=${loginUser.uid}" class="btn  btn-danger btn-lg">添加收货地址</a>
 	            	
 	            </div>
 	            <br><br>

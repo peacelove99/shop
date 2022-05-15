@@ -13,6 +13,7 @@ public class Item implements Serializable {
     private int iid;
     private String oid;
     private int pid;
+    private Product product;
     private BigDecimal icount;  //订单项的小计
     private int inum;           //订单项的数量
 
@@ -38,6 +39,14 @@ public class Item implements Serializable {
 
     public void setPid(int pid) {
         this.pid = pid;
+    }
+
+    public Product getProduct() {
+        return product;
+    }
+
+    public void setProduct(Product product) {
+        this.product = product;
     }
 
     public BigDecimal getIcount() {

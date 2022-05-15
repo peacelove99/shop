@@ -3,6 +3,7 @@ package com.yyp.entity;
 import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.Date;
+import java.util.List;
 
 /*
  * 数据库对应的订单实体表
@@ -14,9 +15,19 @@ public class Orders implements Serializable {
     private String oid;
     private int uid;
     private int aid;
+    private Address address;
     private BigDecimal ocount;//订单的总金额
     private Date otime;    //订单的详细时间
     private int ostate;    //订单状态0未付款，1付块待发货，2发货待收货，3收货待评价，4订单完成，5退货
+    private List<Item> items;
+
+    public List<Item> getItems() {
+        return items;
+    }
+
+    public void setItems(List<Item> items) {
+        this.items = items;
+    }
 
     public String getOid() {
         return oid;
@@ -40,6 +51,14 @@ public class Orders implements Serializable {
 
     public void setAid(int aid) {
         this.aid = aid;
+    }
+
+    public Address getAddress() {
+        return address;
+    }
+
+    public void setAddress(Address address) {
+        this.address = address;
     }
 
     public BigDecimal getOcount() {
