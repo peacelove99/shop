@@ -47,7 +47,7 @@
                     <a href="register.jsp" id="a_top">注册</a>
                 </c:if>
        			<c:if test="${not empty loginUser}">
-                    <a href="userAddress?flag=show" id="a_top">${loginUser.username}</a>
+                    <a href="address?method=show" id="a_top">${loginUser.username}</a>
                     <li>|</li>
                     <a href="user?method=logOut" id="a_top">注销</a>
                     <li>|</li>

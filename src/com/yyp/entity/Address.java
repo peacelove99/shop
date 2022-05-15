@@ -14,7 +14,7 @@ public class Address implements Serializable {
     private String aname;   //地址的收件人
     private String aphone;  //收件人电话
     private String adetail; //收件人详细地址
-    private int    astste;  //是否是默认地址0不是1是
+    private int    astate = 0;  //是否是默认地址0不是1是
 
     public int getAid() {
         return aid;
@@ -56,12 +56,12 @@ public class Address implements Serializable {
         this.adetail = adetail;
     }
 
-    public int getAstste() {
-        return astste;
+    public int getAstate() {
+        return astate;
     }
 
-    public void setAstste(int astste) {
-        this.astste = astste;
+    public void setAstate(int astate) {
+        this.astate = astate;
     }
 
     @Override
@@ -72,7 +72,7 @@ public class Address implements Serializable {
                 ", aname='" + aname + '\'' +
                 ", aphone='" + aphone + '\'' +
                 ", adetail='" + adetail + '\'' +
-                ", astste=" + astste +
+                ", astste=" + astate +
                 '}';
     }
 }
