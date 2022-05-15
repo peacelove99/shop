@@ -13,8 +13,17 @@ public class Cart implements Serializable {
     private int cid;
     private int uid;
     private int pid;
-    private int cnum;           //购物车商品数量
+    private Product product;
+    private int cnum = 0;           //购物车商品数量
     private BigDecimal ccount;  //购物车小计
+
+    public Product getProduct() {
+        return product;
+    }
+
+    public void setProduct(Product product) {
+        this.product = product;
+    }
 
     public int getCid() {
         return cid;
@@ -49,7 +58,11 @@ public class Cart implements Serializable {
     }
 
     public BigDecimal getCcount() {
-        return ccount;
+
+        BigDecimal pprice = product.getPprice();
+        BigDecimal bigDecimal = new BigDecimal(cnum);
+
+        return pprice.multiply(bigDecimal);
     }
 
     public void setCcount(BigDecimal ccount) {

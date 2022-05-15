@@ -32,7 +32,7 @@
 			    <h3>产品名称:<small>${product.pname}</small></h3>
 			    <div style="margin-left: 10px;">
 				    
-				   <p>市场价格:&nbsp;&nbsp;&nbsp;<span class="text-danger" style="font-size: 15px;">${goods.price}</span>&nbsp;&nbsp;&nbsp;<span class="glyphicon glyphicon-yen"></span></p> 
+				   <p>市场价格:&nbsp;&nbsp;&nbsp;<span class="text-danger" style="font-size: 15px;">${product.pprice}</span>&nbsp;&nbsp;&nbsp;<span class="glyphicon glyphicon-yen"></span></p>
 				    <p>上市时间:&nbsp;&nbsp;&nbsp;${product.ptime}</p>
 				     <p>热销指数:&nbsp;&nbsp;&nbsp;
 						<c:forEach begin="1" end="${product.pstate}">
@@ -41,7 +41,7 @@
 					</p>
 				    <p>详细介绍:</p>
 				    <p>&nbsp;&nbsp;${product.pinfo}</p>
-				    <a href="${pageContext.request.contextPath}/addCart?goodsId=${product.pid}&price=${product.pprice}" class="btn btn-warning">加入购物车&nbsp;&nbsp;&nbsp;<span class="glyphicon glyphicon-shopping-cart"></span></a>&nbsp;&nbsp;&nbsp;
+				    <a href="${pageContext.request.contextPath}/cart?method=create&pid=${product.pid}" class="btn btn-warning">加入购物车&nbsp;&nbsp;&nbsp;<span class="glyphicon glyphicon-shopping-cart"></span></a>&nbsp;&nbsp;&nbsp;
 				    <button class="btn btn-danger">直接购买</button>
 			    </div>
 			  </div>

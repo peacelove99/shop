@@ -57,7 +57,7 @@
                 </c:if>
                 <li>|</li>
                 <a href="" id="a_top">消息通知</a>
-                <a href="${pageContext.request.contextPath}/cartservlet?method=getCart" id="shorpcar">购物车</a>
+                <a href="${pageContext.request.contextPath}cart?method=show&uid=${loginUser.uid}" id="shorpcar">购物车</a>
             </span>
         </div>
  </div>
